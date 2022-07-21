@@ -23,6 +23,16 @@ export const LandingGrid = styled.div `
         grid-template-columns: none;
         grid-template-rows: repeat(2, auto);
         text-align: center;
+        margin: 0;
+    }
+`
+
+export const DivContent = styled.div`
+    text-align: left;
+
+    @media screen and (max-width: 960px) {
+        text-align: center;
+        margin: 0;
     }
 `
 
@@ -33,8 +43,8 @@ export const LandingTitle = styled.h1 `
     font-family: 'Source Sans Pro', sans-serif;
     color: ${(props) => props.theme.secondary};
 
-    @media screen and (max-width: 480px) {
-        font-size: 24px;
+    @media screen and (max-width: 960px) {
+        font-size: 29px;
         text-align: center;
     }
 `
@@ -46,9 +56,11 @@ export const Parrafo = styled.p `
     line-height: 24px;
     color: ${(props) => props.theme.secondary};
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 960px) {
         font-size: 24px;
         text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 `
 

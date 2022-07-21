@@ -7,7 +7,8 @@ import {
     Parrafo,
     ImgWrp,
     Image,
-    LandingButton
+    LandingButton,
+    DivContent
 } from './StyledLandingPage';
 import logo from '../../assets/undraw_gaming_re_cma2.svg';
 
@@ -16,13 +17,13 @@ export default function LandingPage() {
         <Background>
             <div>
                 <LandingGrid>
-                    <div>
+                    <DivContent>
                         <LandingTitle>Welcome to Games World</LandingTitle>
                         <Parrafo>This aplication was designed with the idea of implementing what was learned during the 4 months of the soyHenry Bootcamp. In this application you will find a variety of video games along with their details (platforms, genres, rating, etc), you will have the option to search, filter, sort and create your own video game.</Parrafo>
                         <Link to='/home'>
                             <LandingButton>Press Start</LandingButton>
                         </Link>
-                    </div>
+                    </DivContent>
                     <ImgWrp>
                         <Image src={logo}/>
                         {/* <p className='text'>Cooming Soon</p> */}

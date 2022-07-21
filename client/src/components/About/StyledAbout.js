@@ -106,3 +106,8 @@ export const ButtonCv = styled.button`
     margin-top: 10px;
     border-radius: 3px;
 `
+
+export const LinkCv = styled.a`
+    text-decoration: none;
+    color: #fff;
+`

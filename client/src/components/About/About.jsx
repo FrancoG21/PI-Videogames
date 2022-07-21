@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../../assets/profile.png';
+import cv from '../../assets/Franco-Giemenez-CV.pdf';
 import {
     BackgroundAbout,
     ContainerAbout,
@@ -17,7 +18,8 @@ import {
     GitHubIcon,
     ContainerContact,
     ContactLink,
-    ButtonCv
+    ButtonCv,
+    LinkCv
 } from './StyledAbout';
 
 export default function About() {
@@ -31,12 +33,14 @@ export default function About() {
                 <ImageAbout src={profile} alt='profile' />
                 <TitleAbout>Franco Ramiro Gimenez</TitleAbout>
                 <SubtitleAbout>Full Stack Developer</SubtitleAbout>
-                <ButtonCv>Download CV</ButtonCv>
+                <ButtonCv>
+                    <LinkCv href={cv} download target='_blank'>Download CV</LinkCv>
+                </ButtonCv>
                 <Contact>Contact:</Contact>
                 <DivContact>
                     <ContainerContact>
                         <EmailIcon />
-                        <ContactLink href='' target='_blank'>fgimenez029@gmail.com</ContactLink>
+                        <ContactLink>fgimenez029@gmail.com</ContactLink>
                     </ContainerContact>
                     <ContainerContact>
                         <LinkedIcon />
