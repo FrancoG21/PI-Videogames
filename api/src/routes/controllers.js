@@ -17,11 +17,11 @@ const getApiInfo = async () => {
     apiUrl5 = [];
   
   Promise.all([
-    (apiUrl1 = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}`)),   //Devuelvo todas las promesas de las diferentes paginas a mis arreglos vacios
-    (apiUrl2 = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=2`)),
-    (apiUrl3 = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=3`)),
-    (apiUrl4 = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=4`)),
-    (apiUrl5 = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=5`)),
+    (apiUrl1 = await axios.get(`https://api.rawg.io/api/games?key=5f543a167ad849a1a289c6883b16ab96`)),   //Devuelvo todas las promesas de las diferentes paginas a mis arreglos vacios
+    (apiUrl2 = await axios.get(`https://api.rawg.io/api/games?key=5f543a167ad849a1a289c6883b16ab96&page=2`)),
+    (apiUrl3 = await axios.get(`https://api.rawg.io/api/games?key=5f543a167ad849a1a289c6883b16ab96&page=3`)),
+    (apiUrl4 = await axios.get(`https://api.rawg.io/api/games?key=5f543a167ad849a1a289c6883b16ab96&page=4`)),
+    (apiUrl5 = await axios.get(`https://api.rawg.io/api/games?key=5f543a167ad849a1a289c6883b16ab96&page=5`)),
   ]);
   
   let apiInfoTotal = [    //Cargo todos mis resultados de la data de la API y las guardo en una sola constante

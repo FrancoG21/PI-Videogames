@@ -73,7 +73,7 @@ router.get('/videogames', async (req, res) => {
 router.get('/videogame/:id', async (req, res)=> {
   const {id} = req.params
   if(!id.includes('-')) {       //Si mi ID no incluye - , busco la ID de los videogames por la API
-      const detail = await axios.get(`https://api.rawg.io/api/games/${id}?key=${API_KEY}`)
+      const detail = await axios.get(`https://api.rawg.io/api/games/${id}?key=5f543a167ad849a1a289c6883b16ab96`)
       const dat = await detail.data  //Obtengo los resultados que necesito para devolver en mis detalles
       let formated = [{
           id: dat.id,
@@ -158,7 +158,7 @@ router.get('/genres', async (req, res, next) => {
   try {
     const genresDb = await Genre.findAll();
     if (!genresDb.length) {                    //Si no esta mis Generos en la DataBase, lo busco por la API
-      const genresApi = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`);
+      const genresApi = await axios.get(`https://api.rawg.io/api/genres?key=5f543a167ad849a1a289c6883b16ab96`);
       const genresMap = genresApi.data.results?.map((genre) => {  //Mapeo los generos que me llegan como results, para obtener un nuevo arreglo con los names de los generos que quiero
          return {
           name: genre.name
@@ -180,7 +180,7 @@ router.get('/platforms', async(req, res, next)  => {
   try{
     const platformsDb = await Platform.findAll();
     if(!platformsDb.length){
-      const platformsApi = await axios.get(`https://api.rawg.io/api/platforms?key=${API_KEY}`);
+      const platformsApi = await axios.get(`https://api.rawg.io/api/platforms?key=5f543a167ad849a1a289c6883b16ab96`);
       const platformsMap = platformsApi.data.results?.map((platforms) => {
         return{
           id: platforms.id,
